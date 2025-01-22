@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Skills</title>
+    <style>
+        /* Global Styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: black;
+            color: white;
+        }
+
+        /* Skills Container */
+        .skills-container {
+            position: relative;
+            padding: 20px;
+            background-color: #ffd700; /* Yellow background */
+            color: black; /* Black text */
+            border-radius: 8px;
+            margin: 20px auto;
+            max-width: 800px;
+        }
+
+        /* Close Button (Cross Sign) */
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #800000; /* Maroon background */
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            border: none;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            cursor: pointer;
+        }
+
+        .close-btn:hover {
+            background-color: red; /* Highlight on hover */
+        }
+
+        /* Section Title */
+        .skills-container h1 {
+            margin-top: 20px;
+            font-size: 1.8rem;
+            color: white;
+            background-color: #800000; /* Maroon background */
+            padding: 10px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        /* Skill Groups */
+        .skill-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 10px 0;
+        }
+
+        /* Skill Items */
+        .skill-group span {
+            background-color: black;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 20px;
+            font-size: 1rem;
+            text-align: center;
+            display: inline-block;
+            margin-bottom: 10px;
+            animation: zoom 2s infinite alternate; /* Animation for gentle zoom */
+        }
+
+        /* Keyframes for Zoom Animation */
+        @keyframes zoom {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Skills Section -->
+    <div class="skills-container" id="skillsSection">
+        <!-- Close Button -->
+        <button class="close-btn" onclick="goToHome()">X</button>
+
+        <h1>Programming Languages</h1>
+        <div class="skill-group">
+            <span>Java</span>
+            <span>Python</span>
+            <span>C/C++</span>
+            <span>JavaScript</span>
+            <span>VBA</span>
+            <span>Bash</span>
+            <span>MATLAB</span>
+            <span>HTML</span>
+            <span>CSS</span>
+        </div>
+
+        <h1>Frameworks and Libraries</h1>
+        <div class="skill-group">
+            <span>React</span>
+            <span>Angular</span>
+            <span>Vue</span>
+            <span>Node.js</span>
+            <span>Express</span>
+        </div>
+
+        <h1>Database</h1>
+        <div class="skill-group">
+            <span>MySQL</span>
+            <span>SQLite</span>
+            <span>Access</span>
+            <span>MongoDB</span>
+        </div>
+
+        <h1>Tools</h1>
+        <div class="skill-group">
+            <span>Visual Studio Code</span>
+            <span>Atom</span>
+            <span>Eclipse</span>
+            <span>IntelliJ</span>
+            <span>CLion</span>
+            <span>Android Studio</span>
+            <span>Git</span>
+            <span>Docker</span>
+            <span>Gradle</span>
+            <span>JIRA</span>
+        </div>
+
+        <h1>Cloud Environments</h1>
+        <div class="skill-group">
+            <span>AWS</span>
+            <span>Azure</span>
+            <span>Google Cloud Platform</span>
+        </div>
+
+        <h1>Testing and Quality Assurance</h1>
+        <div class="skill-group">
+            <span>JUnit</span>
+            <span>Postman</span>
+            <span>Selenium</span>
+        </div>
+
+        <h1>Communication Protocols</h1>
+        <div class="skill-group">
+            <span>TCP/UDP</span>
+            <span>HTTP/HTTPS</span>
+            <span>WebSockets</span>
+            <span>RESTful APIs</span>
+        </div>
+    </div>
+
+    <!-- JavaScript to Redirect to Home Page -->
+    <script>
+        function goToHome() {
+            // Redirects to home page (index.html)
+            window.location.href = "index.html"; // Replace with your actual home page URL
+        }
+    </script>
+</body>
+</html>

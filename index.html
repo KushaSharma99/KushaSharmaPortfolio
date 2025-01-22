@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Kusha Sharma Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Logo Carousel Styles */
+        .carousel-container {
+            width: 100%;
+            overflow: hidden; /* Hides the overflowing content */
+            background-color: transparent;
+            padding: 20px 0;
+            margin-top: 50px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .carousel-track {
+            display: flex;
+            align-items: center;
+            animation: scroll 20s linear infinite; /* Continuous scrolling animation */
+        }
+
+        .carousel-track img {
+            height: 50px;
+            margin: 0 15px;
+            transition: transform 0.3s ease;
+        }
+
+        .carousel-track img:hover {
+            transform: scale(1.1); /* Slight zoom effect on hover */
+        }
+
+        /* Animation for Scrolling */
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        /* Duplicate track for seamless scrolling */
+        .carousel-track.duplicate {
+            animation-delay: 10s; /* Starts scrolling slightly later */
+        }
+
+        /* Navbar Styles */
+        .nav-links {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            padding: 0;
+            margin: 0;
+        }
+
+        .nav-links li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links li a:hover {
+            color: #f6c747; /* Highlight yellow on hover */
+        }
+
+        /* Icon styles */
+        .nav-links li a i {
+            font-size: 1.5em; /* Icon size */
+            transition: color 0.3s ease;
+        }
+
+        .nav-links li a i:hover {
+            color: #f6c747; /* Highlight yellow on hover */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="project.html">Projects</a></li>
+                    <li><a href="skill.html">Skills</a></li>
+                    <li><a href="css/assets/Kusha_Sharma_Resume.pdf" target="_blank">Resume</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <!-- Contact Icon -->
+                    <li><a href="mailto:kushamodgil99@gmail.com" title="Contact">
+                        <i class="fas fa-envelope"></i>
+                    </a></li>
+                    <!-- LinkedIn Icon -->
+                    <li><a href="https://www.linkedin.com/in/kusha-sharma-84ba89174/" target="_blank" title="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a></li>
+                    <!-- GitHub Icon -->
+                    <li><a href="https://github.com/KushaSharma99" target="_blank" title="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="home-section">
+            <div class="content">
+                <h1>Hi, I'm <span class="highlight">Kusha Sharma</span></h1>
+                <h2>Software Engineer</h2>
+                A passionate software developer with a knack for
+                solving real-world problems through innovative technology. I thrive on
+                continuous learning and embracing challenges that push my boundaries. 
+                I believe in the power of collaboration and creativity to bring impactful
+                ideas to life. With a keen eye for detail and a commitment to excellence,
+                I strive to create user-centric solutions that are both functional and
+                intuitive.
+                Outside of coding, I enjoy exploring emerging technologies, broadening my
+                perspective, and finding inspiration in the dynamic world around me. I’m
+                driven by a desire to make a meaningful difference through my work and
+                grow both personally and professionally along the way.
+            </div>
+            <div class="profile-picture">
+                <img src="css/assets/profile.jpg" alt="Profile Picture">
+            </div>
+        </section>
+    </main>
+      <!-- Logo Carousel -->
+      <div class="carousel-container">
+        <div class="carousel-track">
+            <img src="css/assets/logos/access.png" alt="Access">
+            <img src="css/assets/logos/angular.png" alt="Angular">
+            <img src="css/assets/logos/aws.png" alt="AWS">
+            <img src="css/assets/logos/clion.png" alt="CLion">
+            <img src="css/assets/logos/excelvba.png" alt="Excel VBA">
+            <img src="css/assets/logos/flask.png" alt="Flask">
+            <img src="css/assets/logos/intellj.png" alt="IntelliJ">
+            <img src="css/assets/logos/java.png" alt="Java">
+            <img src="css/assets/logos/javescript.png" alt="JavaScript">
+            <img src="css/assets/logos/mysql.png" alt="MySQL">
+            <img src="css/assets/logos/openai.png" alt="OpenAI">
+            <img src="css/assets/logos/postman.png" alt="Postman">
+            <img src="css/assets/logos/python.png" alt="Python">
+            <img src="css/assets/logos/sql.png" alt="SQL">
+            <img src="css/assets/logos/visualstudio.png" alt="Visual Studio">
+            <img src="css/assets/logos/wireshark.png" alt="Wireshark">
+            <!-- Duplicate logos for seamless loop -->
+            <img src="css/assets/logos/access.png" alt="Access">
+            <img src="css/assets/logos/angular.png" alt="Angular">
+            <img src="css/assets/logos/aws.png" alt="AWS">
+            <img src="css/assets/logos/clion.png" alt="CLion">
+            <img src="css/assets/logos/excelvba.png" alt="Excel VBA">
+            <img src="css/assets/logos/flask.png" alt="Flask">
+            <img src="css/assets/logos/intellj.png" alt="IntelliJ">
+            <img src="css/assets/logos/java.png" alt="Java">
+            <img src="css/assets/logos/javescript.png" alt="JavaScript">
+            <img src="css/assets/logos/mysql.png" alt="MySQL">
+            <img src="css/assets/logos/openai.png" alt="OpenAI">
+            <img src="css/assets/logos/postman.png" alt="Postman">
+            <img src="css/assets/logos/python.png" alt="Python">
+            <img src="css/assets/logos/sql.png" alt="SQL">
+            <img src="css/assets/logos/visualstudio.png" alt="Visual Studio">
+            <img src="css/assets/logos/wireshark.png" alt="Wireshark">
+        </div>
+    </div>
+
+
+</body>
+</html>
+</body>
+</html>

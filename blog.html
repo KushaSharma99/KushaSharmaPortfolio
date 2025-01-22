@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blogs</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1e1e1e; /* Black background */
+            margin: 0;
+            padding: 0;
+            color: #fff; /* Default white text */
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .headline {
+            background-color: #d4a017; /* Dark yellow for headlines */
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Card shadow */
+            width: 80%;
+            max-width: 800px;
+            padding: 20px;
+            cursor: pointer;
+            color: #fff;
+            text-align: center;
+            font-size: 1.2em;
+            font-weight: bold;
+            transition: transform 0.2s ease, background-color 0.3s ease;
+        }
+
+        .headline:hover {
+            background-color: #c39316; /* Slightly darker yellow on hover */
+            transform: scale(1.02);
+        }
+
+        .blog-content {
+            background-color: #d4a017; /* Dark yellow for blog details */
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            width: 80%;
+            max-width: 800px;
+            padding: 20px;
+            color: #fff;
+        }
+
+        .blog-content h3 {
+            color: #800000; /* Maroon for blog titles */
+            font-size: 1.8em;
+            margin: 10px 0;
+        }
+
+        .blog-content p {
+            font-size: 1em;
+            line-height: 1.6;
+        }
+
+        .back-btn {
+            display: block;
+            margin-top: 20px;
+            text-align: center;
+            color: #800000; /* Maroon */
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2em;
+            transition: color 0.2s ease;
+            cursor: pointer;
+        }
+
+        .back-btn:hover {
+            color: #f6c747; /* Highlight yellow on hover */
+        }
+
+        /* Close Icon Styling */
+        .close-icon {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 30px;
+            color: #800000; /* Maroon color */
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.2s ease, color 0.2s ease;
+            z-index: 1000; /* Ensure it stays on top */
+        }
+
+        .close-icon:hover {
+            transform: scale(1.2); /* Enlarge slightly on hover */
+            color: #f6c747; /* Highlight yellow on hover */
+        }
+    </style>
+</head>
+<body>
+    <!-- Close Button -->
+    <a href="index.html" class="close-icon" title="Back to Home">&times;</a>
+
+    <header>
+        <h1 style="text-align: center;">My Blogs</h1>
+    </header>
+
+    <div class="container" id="blog-container">
+        <!-- Blog headlines will be dynamically added here -->
+    </div>
+
+    <script>
+        // Blog data
+        const blogs = [
+            {
+                id: "journey",
+                title: "My Journey to Becoming a Software Developer",
+                content: `
+                    Becoming a software developer was not just a career choice for me—it
+                    was a journey of self-discovery, resilience, and continuous growth.
+                    My path was anything but conventional, but it’s the challenges I
+                    faced along the way that shaped me into the person I am today. Each
+                    step taught me the value of persistence, adaptability, and embracing
+                    failure as a stepping stone. It wasn’t just about learning to
+                    code—it was about building confidence, solving problems, and
+                    uncovering my true potential. This journey has been as much about
+                    personal transformation as it has been about professional growth.
+                `,
+            },
+            {
+                id: "curiosity",
+                title: "Starting Out: A Seed of Curiosity",
+                content: `
+                    My love for technology started early. Growing up, I was fascinated
+                    by how technology could solve problems and bring ideas to life. I
+                    remember tinkering with computers, trying to understand how things
+                    worked behind the scenes. That curiosity led me to explore coding
+                    for the first time. Writing my first “Hello, World!” program felt
+                    like unlocking a new language—one that could turn my imagination
+                    into reality. It was the beginning of a lifelong journey of
+                    discovery and innovation, one where each line of code became a tool
+                    to create something meaningful.
+                `,
+            },
+            {
+                id: "challenges",
+                title: "Challenges Along the Way",
+                content: `
+                    The road wasn’t always smooth. As I ventured deeper into the world
+                    of software development, I encountered countless challenges. From
+                    debugging seemingly impossible errors to learning complex concepts
+                    like algorithms and data structures, there were times when I felt
+                    overwhelmed. Balancing studies, work, and self-learning tested my
+                    perseverance, especially as I navigated the financial pressures of
+                    supporting my education and family.
+                `,
+            },
+            {
+                id: "milestones",
+                title: "Key Milestones and Growth",
+                content: `
+                    One defining moment in my journey was creating my first full-fledged
+                    application—a fitness tracker. It wasn’t just about writing code; it
+                    was about solving a problem, designing an intuitive user interface,
+                    and ensuring the functionality met user needs. That project taught
+                    me the importance of empathy in development—understanding the user’s
+                    perspective.
+                    Another milestone was working on an AI-powered French learning app.
+                    This project not only challenged my technical skills but also
+                    ignited my passion for leveraging technology to improve education.
+                `,
+            },
+            {
+                id: "today",
+                title: "What Drives Me Today",
+                content: `
+                    Today, I see software development as more than just writing code;
+                    it’s about solving real-world problems and making a meaningful
+                    impact. The thrill of creating something that helps others and the
+                    endless opportunities for learning in this field continue to inspire
+                    me.
+                `,
+            },
+            {
+                id: "future",
+                title: "Looking Ahead",
+                content: `
+                    My journey is far from over. I’m constantly striving to improve,
+                    take on new challenges, and contribute to projects that make a
+                    difference. Every day brings new opportunities to grow and innovate,
+                    and I’m excited to see where this path takes me next.
+                `,
+            },
+        ];
+
+        const container = document.getElementById("blog-container");
+
+        // Function to display all headlines
+        const displayHeadlines = () => {
+            container.innerHTML = ""; // Clear previous content
+            blogs.forEach((blog) => {
+                const headline = document.createElement("div");
+                headline.classList.add("headline");
+                headline.innerText = blog.title;
+                headline.addEventListener("click", () => displayBlogContent(blog));
+                container.appendChild(headline);
+            });
+        };
+
+        // Function to display full blog content
+        const displayBlogContent = (blog) => {
+            container.innerHTML = `
+                <div class="blog-content">
+                    <h3>${blog.title}</h3>
+                    <p>${blog.content}</p>
+                    <div class="back-btn" onclick="displayHeadlines()">← Back to Blogs</div>
+                </div>
+            `;
+        };
+
+        // Initialize the page with blog headlines
+        displayHeadlines();
+    </script>
+</body>
+</html>
